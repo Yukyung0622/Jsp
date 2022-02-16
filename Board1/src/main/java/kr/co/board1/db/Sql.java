@@ -17,11 +17,24 @@ public class Sql {
 											+"`regip`=?,"
 											+"`rdate`=NOW()";
 		
-	public static final String SELECT_USER = "SELECT * FROM `Board_user` WHERE `uid`=? AND `pass`=PASSWORD(?);";
+		public static final String SELECT_USER = "SELECT * FROM `Board_user` WHERE `uid`=? AND `pass`=PASSWORD(?);";
 					
 			
-	
-
-	//board
-
+		// board
+		public static final String SELECT_MAX_ID = "SELECT MAX(`id`) FROM `Board_article`";
+		public static final String INSERT_ARTICLE = "INSERT INTO `Board_article` SET "
+													+ "`title`=?,"
+													+ "`content`=?,"
+													+ "`file`=?,"
+													+ "`uid`=?,"
+													+ "`regip`=?,"
+													+ "`rdate`=NOW()";
+		
+		public static final String INSERT_FILE = "INSERT INTO `Board_file` SET "
+												+ "`parent`=?,"
+												+ "`oName`=?,"
+												+ "`nName`=?,"
+												+ "`rdate`=NOW()";
+											
+		
 }
