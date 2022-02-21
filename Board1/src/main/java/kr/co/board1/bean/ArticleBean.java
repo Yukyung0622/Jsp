@@ -14,8 +14,17 @@ public class ArticleBean {
 	private String regip;
 	private String rdate;
 	
-	//추가필드
+	// 추가필드
 	private String fname;
+	private FileBean fb;
+	
+	public FileBean getFb() {
+		return fb;
+	}
+	public void setFb(FileBean fb) {
+		this.fb = fb;
+	}
+	
 	
 	public String getFname() {
 		return fname;
@@ -33,6 +42,7 @@ public class ArticleBean {
 		this.nick = nick;
 	}
 	
+	
 	public int getId() {
 		return id;
 	}
@@ -45,6 +55,10 @@ public class ArticleBean {
 	public void setParent(int parent) {
 		this.parent = parent;
 	}
+	public void setParent(String parent) {
+		this.parent = Integer.parseInt(parent);
+	}
+	
 	public int getComment() {
 		return comment;
 	}

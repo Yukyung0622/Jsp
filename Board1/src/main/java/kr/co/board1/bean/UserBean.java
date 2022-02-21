@@ -1,13 +1,14 @@
 package kr.co.board1.bean;
 
 public class UserBean {
+	
 	private String uid;
 	private String pass;
 	private String name;
 	private String nick;
 	private String email;
 	private String hp;
-	private int	   grade;
+	private int    grade;
 	private String zip;
 	private String addr1;
 	private String addr2;
@@ -86,5 +87,4 @@ public class UserBean {
 	public void setRdate(String rdate) {
 		this.rdate = rdate;
 	}
-
 }

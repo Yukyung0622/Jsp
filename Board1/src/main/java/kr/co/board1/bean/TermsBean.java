@@ -1,7 +1,7 @@
 package kr.co.board1.bean;
 
 public class TermsBean {
-	
+
 	private String terms;
 	private String privacy;
 	
