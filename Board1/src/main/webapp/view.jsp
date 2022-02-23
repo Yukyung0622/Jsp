@@ -1,7 +1,7 @@
 <%@page import="java.util.List"%>
 <%@page import="kr.co.board1.bean.UserBean"%>
 <%@page import="kr.co.board1.bean.ArticleBean"%>
-<%@page import="kr.co.board1.db.ArticleDao"%>
+<%@page import="kr.co.board1.dao.ArticleDao"%>
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <%
 	UserBean sessUser = (UserBean) session.getAttribute("sessUser");
@@ -125,7 +125,7 @@
             </table>
             <div>
                 <a href="#" class="btnDelete">삭제</a>
-                <a href="./modify.html" class="btnModify">수정</a>
+                <a href="./modify.jsp" class="btnModify">수정</a>
                 <a href="/Board1/list.jsp" class="btnList">목록</a>
             </div>  
             
