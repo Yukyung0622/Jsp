@@ -326,7 +326,30 @@ public class ArticleDao {
 		}		
 	}
 	
-	public void updateArticle() {}
+//	public void updateArticle() {
+//		
+//		try {
+//			Connection conn = DBConfig.getInstance().getConnection();
+//			
+//			PreparedStatement psmt = null;
+//			
+//			if(isPlus) {
+//				psmt = conn.prepareStatement(Sql.UPDATE_ARTICLE_COMMENT_PLUS);
+//			}else {
+//				psmt = conn.prepareStatement(Sql.UPDATE_ARTICLE_COMMENT_MINUS);
+//			}
+//			
+//			psmt.setString(1, id);
+//			
+//			psmt.executeUpdate();
+//			conn.close();
+//			
+//		}catch (Exception e) {
+//			e.printStackTrace();
+//		}	
+//		
+//		
+//	}
 	public int updateComment(String content, String id) {
 		
 		int result = 0;
