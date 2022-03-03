@@ -1,8 +1,14 @@
+<%@page import="kr.co.farmstory1.bean.ArticleBean"%>
+<%@page import="java.util.List"%>
+<%@page import="java.util.Map"%>
+<%@page import="kr.co.farmstory1.dao.ArticleDao"%>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+	List<ArticleBean> latests = ArticleDao.getInstance().selectLatests();
+%>
 <%@ include file="./_header.jsp" %>
       <main>
           <div class="slider">
-
               <ul>
                   <li><img src="./img/main_slide_img1.jpg" alt="슬라이더1"></li>
                   <li><img src="./img/main_slide_img2.jpg" alt="슬라이더2"></li>
@@ -28,93 +34,39 @@
                   <a href="/Farmstory1/board/list.jsp?cate=croptalk&type=grow"><img src="./img/main_latest1_tit.png" alt="텃밭 가꾸기"/></a>
                   <img src="./img/main_latest1_img.jpg" alt="이미지"/>
                   <table border="0">
+                 	<% for(ArticleBean article : latests.subList(0, 5)){ %>
                       <tr>
                           <td>></td>
-                          <td><a href="#">토마토! 건강하게 길러서 안심하고 먹자</a></td>
-                          <td>20-12-22</td>
-                      </tr>
-                      <tr>
-                          <td>></td>
-                          <td><a href="#">토마토! 건강하게 길러서 안심하고 먹자</a></td>
-                          <td>20-12-22</td>
-                      </tr>
-                      <tr>
-                          <td>></td>
-                          <td><a href="#">토마토! 건강하게 길러서 안심하고 먹자</a></td>
-                          <td>20-12-22</td>
-                      </tr>
-                      <tr>
-                          <td>></td>
-                          <td><a href="#">토마토! 건강하게 길러서 안심하고 먹자</a></td>
-                          <td>20-12-22</td>
-                      </tr>
-                      <tr>
-                          <td>></td>
-                          <td><a href="#">토마토! 건강하게 길러서 안심하고 먹자</a></td>
-                          <td>20-12-22</td>
-                      </tr>
+                          <td><a href="/Farmstory1/board/view.jsp?cate=croptalk&type=grow&no=<%= article.getNo() %>"><%= article.getTitle() %></a></td>
+                          <td><%= article.getRdate() %></td>
+                      </tr>  
+                     <% } %>                    
                   </table>
               </div>
               <div>
                   <a href="/Farmstory1/board/list.jsp?cate=croptalk&type=school"><img src="./img/main_latest2_tit.png" alt="귀농학교"/></a>
                   <img src="./img/main_latest2_img.jpg" alt="이미지"/>
                   <table border="0">
+                      <% for(ArticleBean article : latests.subList(5, 10)){ %>
                       <tr>
                           <td>></td>
-                          <td><a href="#">토마토! 건강하게 길러서 안심하고 먹자</a></td>
-                          <td>20-12-22</td>
-                      </tr>
-                      <tr>
-                          <td>></td>
-                          <td><a href="#">토마토! 건강하게 길러서 안심하고 먹자</a></td>
-                          <td>20-12-22</td>
-                      </tr>
-                      <tr>
-                          <td>></td>
-                          <td><a href="#">토마토! 건강하게 길러서 안심하고 먹자</a></td>
-                          <td>20-12-22</td>
-                      </tr>
-                      <tr>
-                          <td>></td>
-                          <td><a href="#">토마토! 건강하게 길러서 안심하고 먹자</a></td>
-                          <td>20-12-22</td>
-                      </tr>
-                      <tr>
-                          <td>></td>
-                          <td><a href="#">토마토! 건강하게 길러서 안심하고 먹자</a></td>
-                          <td>20-12-22</td>
-                      </tr>
+                          <td><a href="/Farmstory1/board/view.jsp?cate=croptalk&type=school&no=<%= article.getNo() %>"><%= article.getTitle() %></a></td>
+                          <td><%= article.getRdate() %></td>
+                      </tr>  
+                     <% } %>
                   </table>
               </div>
               <div>
                   <a href="/Farmstory1/board/list.jsp?cate=croptalk&type=story"><img src="./img/main_latest3_tit.png" alt="농작물 이야기"/></a>
                   <img src="./img/main_latest3_img.jpg" alt="이미지"/>
                   <table border="0">
+                      <% for(ArticleBean article : latests.subList(10, 15)){ %>
                       <tr>
                           <td>></td>
-                          <td><a href="#">토마토! 건강하게 길러서 안심하고 먹자</a></td>
-                          <td>20-12-22</td>
-                      </tr>
-                      <tr>
-                          <td>></td>
-                          <td><a href="#">토마토! 건강하게 길러서 안심하고 먹자</a></td>
-                          <td>20-12-22</td>
-                      </tr>
-                      <tr>
-                          <td>></td>
-                          <td><a href="#">토마토! 건강하게 길러서 안심하고 먹자</a></td>
-                          <td>20-12-22</td>
-                      </tr>
-                      <tr>
-                          <td>></td>
-                          <td><a href="#">토마토! 건강하게 길러서 안심하고 먹자</a></td>
-                          <td>20-12-22</td>
-                      </tr>
-                      <tr>
-                          <td>></td>
-                          <td><a href="#">토마토! 건강하게 길러서 안심하고 먹자</a></td>
-                          <td>20-12-22</td>
-                      </tr>
+                          <td><a href="/Farmstory1/board/view.jsp?cate=croptalk&type=story&no=<%= article.getNo() %>"><%= article.getTitle() %></a></td>
+                          <td><%= article.getRdate() %></td>
+                      </tr>  
+                     <% } %>
                   </table>
               </div>
               
@@ -131,7 +83,7 @@
 			<div>
 				<a href="/Farmstory1/board/list.jsp?cate=community&type=qna"><img src="./img/main_sub2_cs_bt1.png" alt="1:1고객문의"/></a>
 				<a href="/Farmstory1/board/list.jsp?cate=community&type=faq"><img src="./img/main_sub2_cs_bt2.png" alt="자주묻는질문"/></a>
-				<a href="#"><img src="./img/main_sub2_cs_bt3.png" alt="배송조회"/></a>
+				<a href="javascript:alert('배송조회는 준비 중입니다.');"><img src="./img/main_sub2_cs_bt3.png"></a>
 			</div>				
 
               </div>
