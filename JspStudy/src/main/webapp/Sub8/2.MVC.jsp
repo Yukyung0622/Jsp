@@ -18,7 +18,11 @@
 
 	</head>
 	<body>
-		<h3>2.MVC(Model2) 실습하기</h3>
+	<h3>2.MVC(Model2) 실습하기</h3>
+	<a href="/JspStudy/Sub8/MVC.do">MVC.do</a><br/>	
+	<a href="/JspStudy/mvc/hello.do">hello</a><br/>
+	<a href="/JspStudy/mvc/welcome.do">welcome</a><br/>
+	<a href="/JspStudy/mvc/greeting.do">greeting</a><br/>
 
 
 	</body>
