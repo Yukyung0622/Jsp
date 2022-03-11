@@ -15,6 +15,11 @@ public class CustomerVo {
 		this.custid = custid;
 	}
 	
+	public void setCustid(String custid) {
+		this.custid = Integer.parseInt(custid);
+	}
+	
+	
 	
 	public String getName() {
 		return name;

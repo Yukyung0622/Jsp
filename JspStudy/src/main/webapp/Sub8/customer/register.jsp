@@ -7,7 +7,7 @@
 	</head>
 	<body>
 		<h3>고객등록</h3>
-		<form action="./proc/registerProc.jsp" method="post">
+		<form action="/JspStudy/Sub8/customer/register.do" method="post">
 			<table border="1">
 				<tr>
 					<td>이름</td>
