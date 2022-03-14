@@ -367,7 +367,7 @@ public class ArticleDao {
 		}
 		return result;
 	}
-	public void deleteArticle() {}
+	public void deleteArticle(String id) {}
 	public void deleteComment(String id) {
 		//댓글 삭제하고 
 		try {
