@@ -15,6 +15,14 @@ public class ArticleVo {
 	private String rdate;
 	
 	private String fname;
+	private FileVo fv;
+	
+	public FileVo getFv() {
+		return fv;
+	}
+	public void setFv(FileVo fv) {
+		this.fv = fv;
+	}
 	
 	public String getFname() {
 		return fname;

@@ -29,8 +29,8 @@ public class Sql {
 	public static final String SELECT_FILE     = "SELECT * FROM `Board_file` WHERE `fid`=?";
 	public static final String SELECT_ARTICLE  = "SELECT * FROM `Board_article` AS a "
 												+ "LEFT JOIN `Board_file` AS b "
-												+ "ON a.id=b.parent "
-												+ "WHERE `id`=?";
+												+ "ON a.no=b.parent "
+												+ "WHERE `no`=?";
 	
 	public static final String SELECT_ARTICLES = "SELECT a.*, b.`nick` FROM `Board_article` AS a "
 												+ "JOIN `Board_user` AS b "
@@ -41,7 +41,12 @@ public class Sql {
 	
 	public static final String SELECT_COMMENTS = "SELECT a.*, b.nick FROM `Board_article` AS a "
 												+ "JOIN `Board_user` AS b ON a.uid = b.uid "
-												+ "WHERE `parent`=? ORDER BY `id` ASC";
+												+ "WHERE `parent`=? ORDER BY `no` ASC";
+	
+	public static final String SELECT_COMMENT  = "SELECT a.*, b.nick FROM `Board_article` AS a "
+												+ "JOIN `Board_user` AS b ON a.uid = b.uid "
+												+ "WHERE `no`=?";
+	
 	
 	public static final String INSERT_ARTICLE = "INSERT INTO `Board_article` SET "
 												+ "`title`=?,"
@@ -75,3 +80,5 @@ public class Sql {
 											  
 	
 }
+
+
